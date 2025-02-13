@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest in Middle Class</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?cs=srgb&dl=pexels-pixabay-261102.jpg&fm=jpg') 
+                        no-repeat center center/cover;
+            color: white;
+            font-family: 'Georgia', serif;
+            position: relative;
+        }
+
+        /* Profile Picture (DP) */
+        .profile-pic {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid gold;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: gold;
+            text-shadow: 3px 3px 10px black;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border: 5px solid gold;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .invest-btn {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background: gold;
+            border: 3px solid white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .invest-btn:hover {
+            background: darkgoldenrod;
+            border-color: gold;
+        }
+
+        /* QR Code Popup */
+        .qr-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .qr-popup img {
+            width: 250px;
+            height: auto;
+        }
+
+        .close-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Profile Picture (DP) -->
+    <img class="profile-pic" src="https://i.ibb.co/H9spPff/Whats-App-Image-2025-02-12-at-21-04-13-98086294.jpg" alt="Profile Picture">
+
+    <h1>Welcome Everyone <br> Invest in Middle Class</h1>
+    
+    <!-- Invest Button -->
+    <button class="invest-btn" onclick="showQR()">Invest 1 Rupee</button> 
+
+    <!-- QR Code Popup -->
+    <div class="qr-popup" id="qrPopup">
+        <h2>Scan & Invest</h2>
+        <img src="https://i.postimg.cc/dtMtgts0/Screenshot-2025-02-11-19-45-27-71-e2d5b3f32b79de1d45acd1fad96fbb0f.jpg" alt="PhonePe QR Code">
+        <br>
+        <button class="close-btn" onclick="hideQR()">Close</button>
+    </div>
+
+    <script>
+        function showQR() {
+            document.getElementById("qrPopup").style.display = "block";
+        }
+
+        function hideQR() {
+            document.getElementById("qrPopup").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
